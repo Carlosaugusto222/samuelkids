@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>SAMUEL KIDS | Moda Infantil — Vitrine & Link na Bio</title>
+  <meta name="description" content="Pequenos looks, grandes memórias. Vestindo com amor cada fase da infância na SAMUEL KIDS. Conheça nossa coleção e faça seu pedido pelo WhatsApp!" />
+  <meta name="theme-color" content="#1E4631" />
+  
+  <!-- Open Graph / Redes Sociais -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="SAMUEL KIDS | Moda Infantil" />
+  <meta property="og:description" content="Pequenos looks, grandes memórias. Vestindo com amor cada fase da infância." />
+  <meta property="og:image" content="./images/logo-samuel-kids.jpeg" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="./images/logo-samuel-kids.jpeg" />
+  
+  <!-- Google Fonts: Quicksand e Nunito -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              bg: '#FAF6F0',
+              beige: '#F2E9DC',
+              darkGreen: '#1E4631',
+              softGreen: '#88A886',
+              terracotta: '#C86D3B',
+              mustard: '#F4B41A',
+              skyBlue: '#4A90E2',
+            }
+          },
+          fontFamily: {
+            sans: ['Quicksand', 'Nunito', 'sans-serif'],
+            display: ['Nunito', 'Quicksand', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Estilos Customizados -->
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body class="flex justify-center items-start min-h-screen text-[#2D3748]">
+
+  <!-- Container Mobile-First (Largura Máxima 480px no Desktop) -->
+  <main class="w-full max-w-[480px] min-h-screen bg-[#FAF6F0] shadow-2xl relative flex flex-col justify-between overflow-x-hidden border-x border-[#F2E9DC]/60 sm:my-4 sm:rounded-3xl sm:border sm:border-[#F2E9DC]">
+    
+    <!-- Elementos Decorativos de Fundo Sutis -->
+    <div class="absolute top-0 right-0 w-48 h-48 bg-[#88A886]/10 rounded-full blur-3xl pointer-events-none -mr-16 -mt-16"></div>
+    <div class="absolute top-80 left-0 w-48 h-48 bg-[#C86D3B]/10 rounded-full blur-3xl pointer-events-none -ml-16"></div>
+    <div class="absolute bottom-60 right-0 w-48 h-48 bg-[#F4B41A]/10 rounded-full blur-3xl pointer-events-none -mr-16"></div>
+
+    <div class="p-4 sm:p-6 space-y-6 relative z-10">
+
+      <!-- ====================================================================
+           SEÇÃO 1: CABEÇALHO (HEADER) & FRASE DE IMPACTO
+           ==================================================================== -->
+      <header class="text-center pt-3 pb-1 space-y-3.5 reveal-on-scroll">
+        
+        <!-- 1. Logo Circular Samuel KIDS (Com neon pulsante) -->
+        <div class="logo-neon-wrapper relative inline-block group" title="Samuel KIDS">
+          <!-- Brilho neon pulsante em halo ao redor da logo -->
+          <div class="logo-neon-halo"></div>
+          
+          <div class="logo-neon-ring w-36 h-36 sm:w-44 sm:h-44 rounded-full overflow-hidden shadow-xl border-4 mx-auto bg-white relative">
+            <img 
+              src="./images/logo-samuel-kids.jpeg" 
+              alt="Samuel KIDS - Moda Infantil" 
+              class="w-full h-full object-cover object-center scale-[1.04] transition-transform duration-500 group-hover:scale-105"
+              loading="eager"
+            />
+          </div>
+        </div>
+
+        <!-- 2. Badge de Categoria: MODA INFANTIL -->
+        <div class="flex justify-center items-center">
+          <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-bold tracking-wider text-[#1E4631] bg-[#F2E9DC] shadow-sm uppercase border border-[#88A886]/30">
+            <svg class="w-3.5 h-3.5 text-[#F4B41A]" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l2.4 7.4h7.6l-6.2 4.5 2.4 7.4-6.2-4.5-6.2 4.5 2.4-7.4-6.2-4.5h7.6z"/>
+            </svg>
+            MODA INFANTIL
+            <svg class="w-3.5 h-3.5 text-[#F4B41A]" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l2.4 7.4h7.6l-6.2 4.5 2.4 7.4-6.2-4.5-6.2 4.5 2.4-7.4-6.2-4.5h7.6z"/>
+            </svg>
+          </span>
+        </div>
+
+        <!-- 3. Frase de Impacto (Headline) -->
+        <div class="px-2">
+          <h1 class="text-[#1E4631] font-extrabold text-lg sm:text-xl leading-snug">
+            “Pequenos looks, grandes memórias.<br />
+            <span class="text-[#C86D3B]">Vestindo com amor cada fase da infância.”</span>
+          </h1>
+        </div>
+
+        <!-- 4. Banner / Pill de Aviso de Novo Endereço (Clicável em destaque elegante) -->
+        <div class="pt-1">
+          <a 
+            href="https://www.google.com/maps/search/?api=1&query=Rua+Dona+Fortunata%2C+142+-+Rua+do+Banco+do+Brasil" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="group inline-flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-white border border-[#F2E9DC] shadow-sm hover:shadow-md hover:border-[#88A886]/60 transition-all text-left w-full"
+            title="Clique para abrir localização no mapa"
+          >
+            <div class="w-8 h-8 rounded-full bg-[#C86D3B]/10 flex items-center justify-center shrink-0 text-[#C86D3B] group-hover:scale-110 group-hover:bg-[#C86D3B] group-hover:text-white transition-all">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 21c4.5-6.5 7-10 7-13a7 7 0 10-14 0c0 3 2.5 6.5 7 13z"/>
+                <circle cx="12" cy="8" r="2.5" />
+              </svg>
+            </div>
+            <div class="text-xs sm:text-[13px] leading-tight flex-1">
+              <span class="font-extrabold text-[#1E4631] block">Novo Endereço:</span>
+              <span class="text-gray-600 font-medium">Rua Dona Fortunata, 142 — Rua do Banco do Brasil</span>
+            </div>
+            <div class="text-[#88A886] group-hover:translate-x-0.5 transition-transform">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </div>
+          </a>
+        </div>
+
+      </header>
+
+      <!-- Divisor Decorativo Sutil -->
+      <div class="flex items-center justify-center gap-2 py-1 opacity-75">
+        <span class="h-[1px] w-12 bg-[#88A886]/40"></span>
+        <svg class="w-4 h-4 text-[#C86D3B]" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5zm14 3c0 .6-.4 1-1 1H6c-.6 0-1-.4-1-1v-1h14v1z"/>
+        </svg>
+        <span class="h-[1px] w-12 bg-[#88A886]/40"></span>
+      </div>
+
+      <!-- ====================================================================
+           SEÇÃO 2: VITRINE EM DESTAQUE (AS 4 PEÇAS INFANTIS)
+           ==================================================================== -->
+      <section class="space-y-3.5 reveal-on-scroll">
+        <div class="flex items-center justify-between px-1">
+          <div>
+            <h2 class="text-base sm:text-lg font-bold text-[#1E4631] flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-[#C86D3B]"></span>
+              Vitrine em Destaque
+            </h2>
+            <p class="text-xs text-gray-500 font-medium">Toque para consultar tamanhos e disponibilidade</p>
+          </div>
+          <span class="text-[11px] font-bold text-[#1E4631] bg-[#F2E9DC] px-2.5 py-0.5 rounded-full">
+            4 Looks
+          </span>
+        </div>
+
+        <!-- Grade Responsiva de 2 Colunas -->
+        <div class="grid grid-cols-2 gap-3 sm:gap-4">
+          
+          <!-- CARD 1: Peça 1 (Menino camiseta laranja, bermuda estampada e pochete) -->
+          <article class="bg-white rounded-2xl p-2.5 sm:p-3 shadow-sm border border-[#F2E9DC] flex flex-col justify-between product-card group">
+            <div>
+              <div class="product-image-container relative overflow-hidden rounded-xl aspect-[4/5] w-full bg-[#FAF6F0] mb-2.5">
+                <img 
+                  src="./images/peca-1-menino-laranja.jpeg" 
+                  alt="Look infantil masculino com camiseta laranja, bermuda estampada e pochete - Samuel KIDS" 
+                  class="aspect-[4/5] object-cover rounded-2xl w-full h-full product-image"
+                  loading="lazy"
+                />
+                <div class="product-shine"></div>
+                <span class="product-badge absolute top-2 left-2 px-2 py-0.5 rounded-md bg-[#1E4631]/85 backdrop-blur-sm text-[10px] font-bold text-white uppercase tracking-wider">
+                  Destaque
+                </span>
+              </div>
+            </div>
+
+            <!-- CTA obrigatório -->
+            <a 
+              href="https://wa.me/5581998486047?text=Ol%C3%A1!%20Vim%20pelo%20Instagram%20da%20Samuel%20KIDS%20e%20quero%20conhecer%20as%20pe%C3%A7as%20dispon%C3%ADveis!" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="product-cta w-full inline-flex items-center justify-center gap-1.5 py-2.5 px-2 bg-[#1E4631] text-white text-[11px] sm:text-xs font-bold rounded-xl shadow transition-all duration-200 active:scale-95 text-center leading-tight mt-1"
+            >
+              <svg class="w-3.5 h-3.5 text-[#25D366] shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.983.568 1.849.88 2.796.88 3.179 0 5.767-2.587 5.767-5.766.001-3.187-2.575-5.77-5.767-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.109.005.253-.041.396.303.145.347.493 1.2.536 1.288.043.087.072.188.014.303-.058.116-.087.188-.173.289l-.26.303c-.087.087-.179.182-.077.357.101.174.453.748.971 1.21.668.596 1.232.78 1.406.868.174.087.275.073.376-.044.101-.116.433-.506.549-.68.116-.173.231-.144.39-.086s1.011.477 1.184.564.289.13.332.202c.043.073.043.419-.101.824zM12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.66 1.434 5.174L2 22l4.981-1.306A9.957 9.957 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/>
+              </svg>
+              <span>Conheça nossas peças disponíveis</span>
+            </a>
+          </article>
+
+          <!-- CARD 2: Peça 2 (Menina com raquete de tênis e conjunto polo verde-menta) -->
+          <article class="bg-white rounded-2xl p-2.5 sm:p-3 shadow-sm border border-[#F2E9DC] flex flex-col justify-between product-card group">
+            <div>
+              <div class="product-image-container relative overflow-hidden rounded-xl aspect-[4/5] w-full bg-[#FAF6F0] mb-2.5">
+                <img 
+                  src="./images/peca-2-menina-verde.jpeg" 
+                  alt="Conjunto infantil feminino polo verde-menta e raquete de tênis - Samuel KIDS" 
+                  class="aspect-[4/5] object-cover rounded-2xl w-full h-full product-image"
+                  loading="lazy"
+                />
+                <div class="product-shine"></div>
+                <span class="product-badge absolute top-2 left-2 px-2 py-0.5 rounded-md bg-[#88A886]/90 backdrop-blur-sm text-[10px] font-bold text-white uppercase tracking-wider">
+                  Coleção
+                </span>
+              </div>
+            </div>
+
+            <!-- CTA obrigatório -->
+            <a 
+              href="https://wa.me/5581998486047?text=Ol%C3%A1!%20Vim%20pelo%20Instagram%20da%20Samuel%20KIDS%20e%20quero%20conhecer%20as%20pe%C3%A7as%20dispon%C3%ADveis!" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="product-cta w-full inline-flex items-center justify-center gap-1.5 py-2.5 px-2 bg-[#1E4631] text-white text-[11px] sm:text-xs font-bold rounded-xl shadow transition-all duration-200 active:scale-95 text-center leading-tight mt-1"
+            >
+              <svg class="w-3.5 h-3.5 text-[#25D366] shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.983.568 1.849.88 2.796.88 3.179 0 5.767-2.587 5.767-5.766.001-3.187-2.575-5.77-5.767-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.109.005.253-.041.396.303.145.347.493 1.2.536 1.288.043.087.072.188.014.303-.058.116-.087.188-.173.289l-.26.303c-.087.087-.179.182-.077.357.101.174.453.748.971 1.21.668.596 1.232.78 1.406.868.174.087.275.073.376-.044.101-.116.433-.506.549-.68.116-.173.231-.144.39-.086s1.011.477 1.184.564.289.13.332.202c.043.073.043.419-.101.824zM12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.66 1.434 5.174L2 22l4.981-1.306A9.957 9.957 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/>
+              </svg>
+              <span>Conheça nossas peças disponíveis</span>
+            </a>
+          </article>
+
+          <!-- CARD 3: Peça 3 (Menino polo bege detalhes azul e bermuda azul) -->
+          <article class="bg-white rounded-2xl p-2.5 sm:p-3 shadow-sm border border-[#F2E9DC] flex flex-col justify-between product-card group">
+            <div>
+              <div class="product-image-container relative overflow-hidden rounded-xl aspect-[4/5] w-full bg-[#FAF6F0] mb-2.5">
+                <img 
+                  src="./images/peca-3-menino-polo.jpeg" 
+                  alt="Conjunto masculino polo bege com detalhes azul claro e bermuda azul - Samuel KIDS" 
+                  class="aspect-[4/5] object-cover rounded-2xl w-full h-full product-image"
+                  loading="lazy"
+                />
+                <div class="product-shine"></div>
+                <span class="product-badge absolute top-2 left-2 px-2 py-0.5 rounded-md bg-[#4A90E2]/90 backdrop-blur-sm text-[10px] font-bold text-white uppercase tracking-wider">
+                  Casual Chic
+                </span>
+              </div>
+            </div>
+
+            <!-- CTA obrigatório -->
+            <a 
+              href="https://wa.me/5581998486047?text=Ol%C3%A1!%20Vim%20pelo%20Instagram%20da%20Samuel%20KIDS%20e%20quero%20conhecer%20as%20pe%C3%A7as%20dispon%C3%ADveis!" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="product-cta w-full inline-flex items-center justify-center gap-1.5 py-2.5 px-2 bg-[#1E4631] text-white text-[11px] sm:text-xs font-bold rounded-xl shadow transition-all duration-200 active:scale-95 text-center leading-tight mt-1"
+            >
+              <svg class="w-3.5 h-3.5 text-[#25D366] shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.983.568 1.849.88 2.796.88 3.179 0 5.767-2.587 5.767-5.766.001-3.187-2.575-5.77-5.767-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.109.005.253-.041.396.303.145.347.493 1.2.536 1.288.043.087.072.188.014.303-.058.116-.087.188-.173.289l-.26.303c-.087.087-.179.182-.077.357.101.174.453.748.971 1.21.668.596 1.232.78 1.406.868.174.087.275.073.376-.044.101-.116.433-.506.549-.68.116-.173.231-.144.39-.086s1.011.477 1.184.564.289.13.332.202c.043.073.043.419-.101.824zM12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.66 1.434 5.174L2 22l4.981-1.306A9.957 9.957 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/>
+              </svg>
+              <span>Conheça nossas peças disponíveis</span>
+            </a>
+          </article>
+
+          <!-- CARD 4: Peça 4 (4 conjuntos femininos pastel com laço no ombro no cabide) -->
+          <article class="bg-white rounded-2xl p-2.5 sm:p-3 shadow-sm border border-[#F2E9DC] flex flex-col justify-between product-card group">
+            <div>
+              <div class="product-image-container relative overflow-hidden rounded-xl aspect-[4/5] w-full bg-[#FAF6F0] mb-2.5">
+                <img 
+                  src="./images/peca-4-conjuntos-pastel.jpeg" 
+                  alt="Conjuntos femininos em tons pastel com laço no ombro - Samuel KIDS" 
+                  class="aspect-[4/5] object-cover rounded-2xl w-full h-full product-image"
+                  loading="lazy"
+                />
+                <div class="product-shine"></div>
+                <span class="product-badge absolute top-2 left-2 px-2 py-0.5 rounded-md bg-[#C86D3B]/90 backdrop-blur-sm text-[10px] font-bold text-white uppercase tracking-wider">
+                  Encanto
+                </span>
+              </div>
+            </div>
+
+            <!-- CTA obrigatório -->
+            <a 
+              href="https://wa.me/5581998486047?text=Ol%C3%A1!%20Vim%20pelo%20Instagram%20da%20Samuel%20KIDS%20e%20quero%20conhecer%20as%20pe%C3%A7as%20dispon%C3%ADveis!" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="product-cta w-full inline-flex items-center justify-center gap-1.5 py-2.5 px-2 bg-[#1E4631] text-white text-[11px] sm:text-xs font-bold rounded-xl shadow transition-all duration-200 active:scale-95 text-center leading-tight mt-1"
+            >
+              <svg class="w-3.5 h-3.5 text-[#25D366] shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.983.568 1.849.88 2.796.88 3.179 0 5.767-2.587 5.767-5.766.001-3.187-2.575-5.77-5.767-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.109.005.253-.041.396.303.145.347.493 1.2.536 1.288.043.087.072.188.014.303-.058.116-.087.188-.173.289l-.26.303c-.087.087-.179.182-.077.357.101.174.453.748.971 1.21.668.596 1.232.78 1.406.868.174.087.275.073.376-.044.101-.116.433-.506.549-.68.116-.173.231-.144.39-.086s1.011.477 1.184.564.289.13.332.202c.043.073.043.419-.101.824zM12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.66 1.434 5.174L2 22l4.981-1.306A9.957 9.957 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/>
+              </svg>
+              <span>Conheça nossas peças disponíveis</span>
+            </a>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SEÇÃO 3: SOBRE A MARCA
+           ==================================================================== -->
+      <section class="reveal-on-scroll">
+        <div class="bg-gradient-to-br from-white via-white to-[#F2E9DC]/40 rounded-3xl p-5 sm:p-6 border border-[#F2E9DC] shadow-sm text-center relative overflow-hidden">
+          
+          <!-- Ícone Delicado: Coroa da Samuel KIDS -->
+          <div class="w-12 h-12 rounded-2xl bg-[#FAF6F0] border border-[#F2E9DC] shadow-sm flex items-center justify-center mx-auto mb-3 text-[#F4B41A]">
+            <svg class="w-6 h-6 fill-current drop-shadow-sm" viewBox="0 0 24 24">
+              <path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5zm14 3c0 .6-.4 1-1 1H6c-.6 0-1-.4-1-1v-1h14v1z"/>
+            </svg>
+          </div>
+
+          <!-- Título -->
+          <h2 class="text-[#1E4631] font-extrabold text-base sm:text-lg mb-2">
+            Sobre a Samuel KIDS
+          </h2>
+
+          <!-- Texto -->
+          <p class="text-xs sm:text-sm text-gray-600 leading-relaxed font-medium">
+            A Samuel KIDS nasceu para deixar a infância ainda mais especial! Selecionamos looks infantis que unem estilo, conforto e charme, acompanhando os pequenos em cada fase e transformando momentos simples em lindas memórias.
+          </p>
+
+          <!-- Badges de Diferenciais Rápidos -->
+          <div class="mt-4 pt-4 border-t border-[#F2E9DC] grid grid-cols-3 gap-2 text-center">
+            <div class="p-1.5 rounded-xl bg-[#FAF6F0]">
+              <span class="block text-[#1E4631] font-bold text-xs">Conforto</span>
+              <span class="text-[10px] text-gray-500">Tecidos nobres</span>
+            </div>
+            <div class="p-1.5 rounded-xl bg-[#FAF6F0]">
+              <span class="block text-[#C86D3B] font-bold text-xs">Estilo</span>
+              <span class="text-[10px] text-gray-500">Tendências kids</span>
+            </div>
+            <div class="p-1.5 rounded-xl bg-[#FAF6F0]">
+              <span class="block text-[#4A90E2] font-bold text-xs">Carinho</span>
+              <span class="text-[10px] text-gray-500">Em cada detalhe</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SEÇÃO 4: CHAMADA FINAL (CALL TO ACTION PRINCIPAL)
+           ==================================================================== -->
+      <section class="reveal-on-scroll">
+        <div class="bg-gradient-to-b from-[#1E4631] to-[#153424] rounded-3xl p-6 text-white text-center shadow-lg relative overflow-hidden">
+          
+          <!-- Detalhe decorativo com estrela -->
+          <div class="absolute -top-8 -right-8 w-24 h-24 bg-[#88A886]/20 rounded-full blur-xl pointer-events-none"></div>
+
+          <!-- Texto em destaque -->
+          <p class="text-sm sm:text-base leading-relaxed mb-5 font-normal">
+            <span class="font-extrabold text-[#F4B41A] block text-base sm:text-lg mb-1">
+              Apaixone-se pela nossa coleção!
+            </span>
+            Escolha seus looks favoritos e faça seu pedido pelo nosso WhatsApp. Será um prazer fazer parte dos momentos especiais do seu pequeno! 💛
+          </p>
+
+          <!-- Botão Principal (Grande, pulsante/destacado com ícone do WhatsApp) -->
+          <a 
+            href="https://wa.me/5581998486047?text=Ol%C3%A1!%20Vim%20pelo%20link%20da%20bio%20e%20quero%20conhecer%20a%20cole%C3%A7%C3%A3o%20da%20Samuel%20KIDS!" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="animate-pulse-cta group inline-flex items-center justify-center gap-3 w-full py-4 px-5 bg-gradient-to-r from-[#25D366] to-[#1eb857] hover:from-[#22bf5b] hover:to-[#1aa34d] text-white font-extrabold text-sm sm:text-base rounded-2xl shadow-xl transition-all duration-300 active:scale-95"
+          >
+            <div class="w-7 h-7 rounded-full bg-white/20 flex items-center justify-center group-hover:scale-110 transition-transform">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.983.568 1.849.88 2.796.88 3.179 0 5.767-2.587 5.767-5.766.001-3.187-2.575-5.77-5.767-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.109.005.253-.041.396.303.145.347.493 1.2.536 1.288.043.087.072.188.014.303-.058.116-.087.188-.173.289l-.26.303c-.087.087-.179.182-.077.357.101.174.453.748.971 1.21.668.596 1.232.78 1.406.868.174.087.275.073.376-.044.101-.116.433-.506.549-.68.116-.173.231-.144.39-.086s1.011.477 1.184.564.289.13.332.202c.043.073.043.419-.101.824zM12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.66 1.434 5.174L2 22l4.981-1.306A9.957 9.957 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/>
+              </svg>
+            </div>
+            <span>Conheça nossa coleção</span>
+          </a>
+
+          <p class="text-[11px] text-emerald-200/80 mt-3 font-medium">
+            Atendimento carinhoso e envio para todo o Brasil
+          </p>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SEÇÃO 5: LOCALIZAÇÃO E CONTATO (RODAPÉ)
+           ==================================================================== -->
+      <footer class="space-y-4 pt-1 pb-6 reveal-on-scroll">
+        
+        <!-- Card Informativo -->
+        <div class="bg-white rounded-3xl p-5 border border-[#F2E9DC] shadow-sm space-y-3">
+          
+          <!-- Loja: SAMUEL KIDS — Moda Infantil -->
+          <div class="flex items-center gap-3 pb-3 border-b border-[#F2E9DC]">
+            <div class="w-10 h-10 rounded-2xl bg-[#FAF6F0] border border-[#F2E9DC] flex items-center justify-center text-[#1E4631] font-bold text-sm">
+              👑
+            </div>
+            <div>
+              <span class="text-[11px] text-gray-500 font-semibold uppercase tracking-wider block">Loja Física & Online</span>
+              <h3 class="text-sm sm:text-base font-extrabold text-[#1E4631]">
+                SAMUEL KIDS — Moda Infantil
+              </h3>
+            </div>
+          </div>
+
+          <!-- Novo Endereço -->
+          <div class="flex items-start gap-3">
+            <div class="w-8 h-8 rounded-xl bg-[#C86D3B]/10 flex items-center justify-center text-[#C86D3B] shrink-0 mt-0.5">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+            </div>
+            <div class="text-xs">
+              <span class="font-bold text-[#1E4631] block">Novo Endereço:</span>
+              <a 
+                href="https://www.google.com/maps/search/?api=1&query=Rua+Dona+Fortunata%2C+142+-+Rua+do+Banco+do+Brasil" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="text-gray-600 hover:text-[#C86D3B] transition-colors underline decoration-dotted"
+              >
+                Rua Dona Fortunata, 142 - Rua do Banco do Brasil
+              </a>
+            </div>
+          </div>
+
+          <!-- Contato / WhatsApp (com link clicável) -->
+          <div class="flex items-center gap-3 pt-1">
+            <div class="w-8 h-8 rounded-xl bg-[#25D366]/15 flex items-center justify-center text-[#25D366] shrink-0">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.983.568 1.849.88 2.796.88 3.179 0 5.767-2.587 5.767-5.766.001-3.187-2.575-5.77-5.767-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.109.005.253-.041.396.303.145.347.493 1.2.536 1.288.043.087.072.188.014.303-.058.116-.087.188-.173.289l-.26.303c-.087.087-.179.182-.077.357.101.174.453.748.971 1.21.668.596 1.232.78 1.406.868.174.087.275.073.376-.044.101-.116.433-.506.549-.68.116-.173.231-.144.39-.086s1.011.477 1.184.564.289.13.332.202c.043.073.043.419-.101.824zM12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.66 1.434 5.174L2 22l4.981-1.306A9.957 9.957 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/>
+              </svg>
+            </div>
+            <div class="text-xs">
+              <span class="font-bold text-[#1E4631] block">Contato / WhatsApp:</span>
+              <a 
+                href="https://wa.me/5581998486047?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20a%20Samuel%20KIDS" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="font-extrabold text-[#1E4631] hover:text-[#25D366] transition-colors"
+              >
+                (81) 99848-6047
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Copyright Limpo e Elegante -->
+        <div class="text-center text-[11px] text-gray-500 font-medium pt-2 pb-6">
+          <p>© 2026 SAMUEL KIDS. Todos os direitos reservados.</p>
+          <p class="text-[10px] text-gray-400 mt-0.5">Feito com amor para momentos inesquecíveis ✨</p>
+        </div>
+
+      </footer>
+
+    </div>
+
+    <!-- ====================================================================
+         BOTÃO FLUTUANTE DISCRETO DO WHATSAPP (CANTO INFERIOR DIREITO)
+         ==================================================================== -->
+    <aside class="fixed bottom-5 right-5 sm:right-[calc(50%-225px)] z-50">
+      <a 
+        href="https://wa.me/5581998486047?text=Ol%C3%A1!%20Vim%20pelo%20Instagram%20da%20Samuel%20KIDS%20e%20gostaria%20de%20atendimento!" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        aria-label="Fale conosco no WhatsApp"
+        title="Fale conosco no WhatsApp"
+        class="flex items-center justify-center w-14 h-14 bg-[#25D366] hover:bg-[#20ba59] text-white rounded-full shadow-2xl transition-all duration-300 hover:scale-110 active:scale-95 group relative border-2 border-white"
+      >
+        <!-- Efeito de pulso discreto -->
+        <span class="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-30"></span>
+        
+        <svg class="w-7 h-7 fill-current relative z-10" viewBox="0 0 24 24">
+          <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.983.568 1.849.88 2.796.88 3.179 0 5.767-2.587 5.767-5.766.001-3.187-2.575-5.77-5.767-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.109.005.253-.041.396.303.145.347.493 1.2.536 1.288.043.087.072.188.014.303-.058.116-.087.188-.173.289l-.26.303c-.087.087-.179.182-.077.357.101.174.453.748.971 1.21.668.596 1.232.78 1.406.868.174.087.275.073.376-.044.101-.116.433-.506.549-.68.116-.173.231-.144.39-.086s1.011.477 1.184.564.289.13.332.202c.043.073.043.419-.101.824zM12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.66 1.434 5.174L2 22l4.981-1.306A9.957 9.957 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/>
+        </svg>
+
+        <!-- Tooltip discreto no desktop -->
+        <span class="hidden sm:group-hover:inline-block absolute right-16 top-1/2 -translate-y-1/2 bg-[#1E4631] text-white text-xs font-bold py-1.5 px-3 rounded-xl whitespace-nowrap shadow-lg">
+          Fale Conosco 👋
+        </span>
+      </a>
+    </aside>
+
+  </main>
+
+  <script type="module" src="./scripts.js"></script>
+</body>
+</html>
