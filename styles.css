@@ -339,6 +339,15 @@ details[open] summary ~ * {
 }
 
 /* ==========================================================================
+   WIDGET / BRANDING DO LOVABLE (REMOÇÃO COMPLETA)
+   ========================================================================== */
+#lovable-badge {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+/* ==========================================================================
    REGRAS OBRIGATÓRIAS: PREFERS-REDUCED-MOTION
    ========================================================================== */
 @media (prefers-reduced-motion: reduce) {
