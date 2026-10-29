@@ -1,5 +1,5 @@
 /* ==========================================================================
-   SAMUEL KIDS — Estilos Complementares & Animações
+   SAMUEL KIDS — Estilos, Microinterações & Animações Elegantes
    ========================================================================== */
 
 :root {
@@ -30,27 +30,26 @@ body {
   color: #2D3748;
 }
 
-/* Micro-animação suave de pulsar */
-@keyframes pulseSubtle {
-  0%, 100% {
-    transform: scale(1);
-    box-shadow: 0 10px 25px -5px rgba(30, 70, 49, 0.4), 0 8px 10px -6px rgba(30, 70, 49, 0.2);
-  }
-  50% {
-    transform: scale(1.025);
-    box-shadow: 0 18px 30px -5px rgba(30, 70, 49, 0.5), 0 12px 14px -6px rgba(30, 70, 49, 0.3);
-  }
+/* ==========================================================================
+   ACESSIBILIDADE: FOCO VISÍVEL EM TRANSIÇÃO DE 200ms
+   ========================================================================== */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-dark-green);
+  outline-offset: 3px;
+  border-radius: 0.85rem;
+  transition: outline-offset 200ms ease;
 }
 
-.animate-pulse-cta {
-  animation: pulseSubtle 2.8s ease-in-out infinite;
-}
-
-/* Animação de entrada dos cards */
+/* ==========================================================================
+   1) ENTRADA AO ROLAR (REVEAL ON SCROLL VIA TRANSFORM & OPACITY)
+   ========================================================================== */
 .reveal-on-scroll {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateY(16px);
+  transition: opacity 280ms cubic-bezier(0.16, 1, 0.3, 1),
+              transform 280ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
 }
 
 .reveal-on-scroll.is-visible {
@@ -58,192 +57,317 @@ body {
   transform: translateY(0);
 }
 
-/* Brilho suave sutil em hover (mantido para compatibilidade) */
-.glow-card {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-.glow-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 28px -6px rgba(30, 70, 49, 0.12), 0 6px 12px -4px rgba(200, 109, 59, 0.08);
-}
+/* Delays escalonados leves para cards e elementos sequenciais */
+.reveal-delay-1 { transition-delay: 50ms; }
+.reveal-delay-2 { transition-delay: 110ms; }
+.reveal-delay-3 { transition-delay: 170ms; }
+.reveal-delay-4 { transition-delay: 230ms; }
 
 /* ==========================================================================
-   ANIMAÇÃO: NEON PULSANTE NA LOGO
+   2) INTERAÇÕES: LINKS, CARDS E BOTÕES (TRANSIÇÕES DE 150 A 300 MS)
    ========================================================================== */
-@keyframes neonPulseGlow {
-  0%, 100% {
-    opacity: 0.55;
-    transform: scale(1.04);
-    filter: blur(12px);
-    box-shadow: 
-      0 0 20px rgba(136, 168, 134, 0.65),
-      0 0 36px rgba(244, 180, 26, 0.45),
-      0 0 55px rgba(200, 109, 59, 0.25);
-  }
-  50% {
-    opacity: 0.95;
-    transform: scale(1.14);
-    filter: blur(18px);
-    box-shadow: 
-      0 0 30px rgba(244, 180, 26, 0.85),
-      0 0 52px rgba(136, 168, 134, 0.75),
-      0 0 80px rgba(200, 109, 59, 0.4);
-  }
+
+/* Card de Endereço no Cabeçalho */
+.address-card {
+  transition: transform 200ms cubic-bezier(0.2, 0, 0.2, 1),
+              box-shadow 200ms cubic-bezier(0.2, 0, 0.2, 1),
+              border-color 200ms ease;
+  will-change: transform;
 }
 
-@keyframes neonRingPulse {
-  0%, 100% {
-    border-color: #88A886;
-    box-shadow: 
-      0 0 12px rgba(136, 168, 134, 0.8),
-      0 0 24px rgba(136, 168, 134, 0.5),
-      0 0 40px rgba(244, 180, 26, 0.35),
-      inset 0 0 10px rgba(136, 168, 134, 0.2);
-  }
-  50% {
-    border-color: #F4B41A;
-    box-shadow: 
-      0 0 20px rgba(244, 180, 26, 0.95),
-      0 0 38px rgba(136, 168, 134, 0.75),
-      0 0 60px rgba(244, 180, 26, 0.5),
-      inset 0 0 16px rgba(244, 180, 26, 0.35);
-  }
+.address-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px -4px rgba(30, 70, 49, 0.1);
+  border-color: rgba(136, 168, 134, 0.6);
 }
 
-@keyframes logoFloat {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-4px);
-  }
+.address-card:active {
+  transform: translateY(0) scale(0.99);
+  transition-duration: 150ms;
 }
 
-.logo-neon-wrapper {
-  animation: logoFloat 4s ease-in-out infinite;
-  display: inline-block;
-  cursor: pointer;
-}
-
-.logo-neon-halo {
-  position: absolute;
-  inset: -6px;
-  border-radius: 9999px;
-  background: radial-gradient(circle, rgba(244, 180, 26, 0.45) 0%, rgba(136, 168, 134, 0.5) 50%, rgba(200, 109, 59, 0.2) 75%);
-  animation: neonPulseGlow 3s ease-in-out infinite;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.logo-neon-ring {
-  position: relative;
-  z-index: 1;
-  animation: neonRingPulse 3s ease-in-out infinite;
-  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease;
-}
-
-.logo-neon-wrapper:hover .logo-neon-ring {
-  transform: scale(1.05);
-  box-shadow: 
-    0 0 25px rgba(244, 180, 26, 1),
-    0 0 45px rgba(136, 168, 134, 0.9),
-    0 0 70px rgba(244, 180, 26, 0.65),
-    inset 0 0 20px rgba(244, 180, 26, 0.4);
-}
-
-/* ==========================================================================
-   ANIMAÇÃO: AO PASSAR O MOUSE NOS PRODUTOS (HOVER)
-   ========================================================================== */
+/* Cards de Produto na Vitrine */
 .product-card {
   position: relative;
-  transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1), 
-              box-shadow 0.35s cubic-bezier(0.25, 1, 0.5, 1), 
-              border-color 0.35s ease;
-  will-change: transform, box-shadow;
+  transition: transform 240ms cubic-bezier(0.25, 1, 0.5, 1), 
+              box-shadow 240ms cubic-bezier(0.25, 1, 0.5, 1), 
+              border-color 240ms ease;
+  will-change: transform;
   overflow: hidden;
 }
 
 .product-card:hover {
-  transform: translateY(-6px) scale(1.015);
-  border-color: rgba(136, 168, 134, 0.7);
-  box-shadow: 
-    0 20px 35px -10px rgba(30, 70, 49, 0.18),
-    0 8px 18px -4px rgba(200, 109, 59, 0.12),
-    0 0 0 1px rgba(136, 168, 134, 0.25);
+  transform: translateY(-4px) scale(1.01);
+  border-color: rgba(136, 168, 134, 0.65);
+  box-shadow: 0 14px 28px -8px rgba(30, 70, 49, 0.12),
+              0 6px 14px -4px rgba(200, 109, 59, 0.08);
 }
 
 .product-card:active {
-  transform: translateY(-2px) scale(0.99);
+  transform: translateY(-1px) scale(0.99);
+  transition-duration: 150ms;
 }
 
-/* Container da Imagem com overflow hidden */
+/* Imagens dos Produtos: Zoom Sutil (150 a 300ms) */
 .product-image-container {
   position: relative;
   overflow: hidden;
 }
 
-/* Imagem do Produto com zoom fluido */
 .product-image {
-  transition: transform 0.55s cubic-bezier(0.25, 1, 0.5, 1), 
-              filter 0.55s ease;
+  transition: transform 260ms cubic-bezier(0.25, 1, 0.5, 1),
+              filter 260ms ease;
   will-change: transform;
 }
 
 .product-card:hover .product-image {
-  transform: scale(1.09);
-  filter: brightness(1.03) contrast(1.02);
+  transform: scale(1.04);
+  filter: brightness(1.02);
 }
 
-/* Feixe de Luz / Brilho suave (Shine / Sheen) */
+/* Feixe de Luz / Brilho Suave nos Produtos (Animando apenas Transform) */
 .product-shine {
   position: absolute;
-  top: 0;
-  left: -130%;
-  width: 60%;
+  inset: 0;
+  width: 100%;
   height: 100%;
   background: linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(255, 255, 255, 0.32) 50%,
-    transparent 100%
+    105deg,
+    transparent 20%,
+    rgba(255, 255, 255, 0.3) 50%,
+    transparent 80%
   );
-  transform: skewX(-25deg);
+  transform: translateX(-100%);
   pointer-events: none;
   z-index: 10;
-  transition: left 0.75s ease;
+  transition: transform 280ms cubic-bezier(0.2, 0, 0.2, 1);
+  will-change: transform;
 }
 
 .product-card:hover .product-shine {
-  left: 170%;
+  transform: translateX(100%);
 }
 
 /* Badge de Destaque / Coleção */
 .product-badge {
-  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), 
-              box-shadow 0.3s ease;
+  transition: transform 200ms cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 200ms ease;
   will-change: transform;
 }
 
 .product-card:hover .product-badge {
-  transform: scale(1.08) translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+  transform: scale(1.05) translateY(-1px);
 }
 
-/* Botão de WhatsApp no card */
+/* Botão de WhatsApp no Card */
 .product-cta {
-  transition: all 0.25s ease;
+  transition: transform 180ms ease,
+              background-color 180ms ease,
+              box-shadow 180ms ease;
+  will-change: transform;
 }
 
-.product-card:hover .product-cta {
+.product-cta:hover {
   background-color: #163524;
   transform: translateY(-1px);
-  box-shadow: 0 6px 16px -2px rgba(30, 70, 49, 0.35);
+  box-shadow: 0 4px 12px -2px rgba(30, 70, 49, 0.3);
+}
+
+.product-cta:active {
+  transform: translateY(0) scale(0.97);
+  transition-duration: 150ms;
 }
 
 .product-cta svg {
-  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: transform 200ms cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-.product-card:hover .product-cta svg {
-  transform: scale(1.18) rotate(6deg);
+.product-cta:hover svg {
+  transform: scale(1.12);
+}
+
+/* ==========================================================================
+   3) LOGO: ESTILO ELEGANTE E MICROINTERAÇÃO SUTIL NO HOVER
+   ========================================================================== */
+.logo-neon-wrapper {
+  display: inline-block;
+  cursor: pointer;
+  transition: transform 240ms cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform;
+}
+
+.logo-neon-wrapper:hover {
+  transform: scale(1.025);
+}
+
+.logo-neon-halo {
+  position: absolute;
+  inset: -4px;
+  border-radius: 9999px;
+  background: radial-gradient(circle, rgba(244, 180, 26, 0.3) 0%, rgba(136, 168, 134, 0.35) 60%, transparent 80%);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.6;
+  transition: opacity 240ms ease;
+}
+
+.logo-neon-wrapper:hover .logo-neon-halo {
+  opacity: 1;
+}
+
+.logo-neon-ring {
+  position: relative;
+  z-index: 1;
+  border-color: #88A886;
+  box-shadow: 0 6px 18px rgba(30, 70, 49, 0.15);
+  transition: border-color 240ms ease,
+              box-shadow 240ms ease;
+}
+
+.logo-neon-wrapper:hover .logo-neon-ring {
+  border-color: #F4B41A;
+  box-shadow: 0 8px 24px rgba(244, 180, 26, 0.3),
+              0 4px 12px rgba(136, 168, 134, 0.25);
+}
+
+/* ==========================================================================
+   4) BOTÃO PRINCIPAL (CTA): ESCALA LEVE & BRILHO ELEGANTE NO HOVER
+   ========================================================================== */
+.main-cta-btn {
+  position: relative;
+  overflow: hidden;
+  transition: transform 220ms cubic-bezier(0.2, 0, 0.2, 1),
+              box-shadow 220ms cubic-bezier(0.2, 0, 0.2, 1),
+              background 220ms ease;
+  will-change: transform;
+}
+
+.main-cta-btn:hover {
+  transform: scale(1.02);
+  box-shadow: 0 16px 32px -6px rgba(37, 211, 102, 0.4),
+              0 8px 16px -4px rgba(30, 70, 49, 0.25);
+}
+
+.main-cta-btn:active {
+  transform: scale(0.98);
+  transition-duration: 150ms;
+}
+
+/* Feixe de Brilho no Botão Principal (Animando apenas Transform) */
+.btn-shine {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    105deg,
+    transparent 25%,
+    rgba(255, 255, 255, 0.28) 50%,
+    transparent 75%
+  );
+  transform: translateX(-100%);
+  pointer-events: none;
+  transition: transform 280ms cubic-bezier(0.2, 0, 0.2, 1);
+  will-change: transform;
+}
+
+.main-cta-btn:hover .btn-shine {
+  transform: translateX(100%);
+}
+
+/* ==========================================================================
+   5) BOTÃO FLUTUANTE DO WHATSAPP: MICROINTERAÇÃO SUAVE
+   ========================================================================== */
+.floating-whatsapp {
+  transition: transform 200ms cubic-bezier(0.25, 1, 0.5, 1),
+              box-shadow 200ms cubic-bezier(0.25, 1, 0.5, 1),
+              background-color 200ms ease;
+  will-change: transform;
+}
+
+.floating-whatsapp:hover {
+  transform: scale(1.08);
+  box-shadow: 0 12px 28px -4px rgba(37, 211, 102, 0.5),
+              0 6px 12px -2px rgba(30, 70, 49, 0.2);
+}
+
+.floating-whatsapp:active {
+  transform: scale(0.95);
+  transition-duration: 150ms;
+}
+
+/* Badges da Seção Sobre */
+.feature-badge {
+  transition: transform 200ms cubic-bezier(0.25, 1, 0.5, 1),
+              box-shadow 200ms ease;
+  will-change: transform;
+}
+
+.feature-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px -2px rgba(30, 70, 49, 0.08);
+}
+
+/* Suporte Suave para Modais, Menus e Accordions */
+details {
+  transition: opacity 200ms ease;
+}
+
+details[open] summary ~ * {
+  animation: detailsFade 240ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes detailsFade {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.menu-drawer,
+.modal-overlay {
+  transition: opacity 240ms ease;
+}
+
+.modal-content {
+  transition: transform 240ms cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 240ms ease;
+}
+
+/* ==========================================================================
+   REGRAS OBRIGATÓRIAS: PREFERS-REDUCED-MOTION
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .reveal-on-scroll {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  
+  .product-shine,
+  .btn-shine {
+    display: none !important;
+  }
+
+  .product-card:hover,
+  .main-cta-btn:hover,
+  .floating-whatsapp:hover,
+  .address-card:hover,
+  .feature-badge:hover,
+  .logo-neon-wrapper:hover {
+    transform: none !important;
+  }
 }
