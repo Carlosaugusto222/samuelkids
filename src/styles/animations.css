@@ -50,6 +50,8 @@
   .main-cta-btn:hover,
   .floating-whatsapp:hover,
   .address-card:hover,
+  .about-card:hover,
+  .info-card:hover,
   .feature-badge:hover,
   .logo-neon-wrapper:hover {
     transform: none !important;
