@@ -1,0 +1,49 @@
+/* ==========================================================================
+   UTILITÁRIOS, ACESSIBILIDADE E WIDGETS
+   ========================================================================== */
+
+/* Acessibilidade: foco visível em 200ms */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-dark-green);
+  outline-offset: 3px;
+  border-radius: 0.85rem;
+  transition: outline-offset 200ms ease;
+}
+
+/* Suporte suave para details, modais e gavetas caso utilizados */
+details {
+  transition: opacity 200ms ease;
+}
+
+details[open] summary ~ * {
+  animation: detailsFade 240ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes detailsFade {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.menu-drawer,
+.modal-overlay {
+  transition: opacity 240ms ease;
+}
+
+.modal-content {
+  transition: transform 240ms cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 240ms ease;
+}
+
+/* Remoção completa do widget de branding do Lovable */
+#lovable-badge {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}

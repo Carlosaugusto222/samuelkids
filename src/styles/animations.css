@@ -1,0 +1,57 @@
+/* ==========================================================================
+   ANIMAÇÕES E PREFERÊNCIAS DE MOVIMENTO
+   ========================================================================== */
+
+/* Entrada ao rolar a página */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 280ms cubic-bezier(0.16, 1, 0.3, 1),
+              transform 280ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Delays escalonados leves para cards e elementos sequenciais */
+.reveal-delay-1 { transition-delay: 50ms; }
+.reveal-delay-2 { transition-delay: 110ms; }
+.reveal-delay-3 { transition-delay: 170ms; }
+.reveal-delay-4 { transition-delay: 230ms; }
+
+/* ==========================================================================
+   ACESSIBILIDADE: PREFERS-REDUCED-MOTION
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .reveal-on-scroll {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  
+  .product-shine,
+  .btn-shine {
+    display: none !important;
+  }
+
+  .product-card:hover,
+  .main-cta-btn:hover,
+  .floating-whatsapp:hover,
+  .address-card:hover,
+  .feature-badge:hover,
+  .logo-neon-wrapper:hover {
+    transform: none !important;
+  }
+}
