@@ -1,8 +1,17 @@
 /* ==========================================================================
-   SAMUEL KIDS — Folha de Estilos Global (Manifesto Modular)
+   SAMUEL KIDS — Folha de Estilos Global
    ========================================================================== */
 
 @import './src/styles/variables.css';
 @import './src/styles/utilities.css';
 @import './src/styles/components.css';
 @import './src/styles/animations.css';
+
+/* ==========================================================================
+   WIDGET / BRANDING DO LOVABLE (REMOÇÃO COMPLETA)
+   ========================================================================== */
+#lovable-badge {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
